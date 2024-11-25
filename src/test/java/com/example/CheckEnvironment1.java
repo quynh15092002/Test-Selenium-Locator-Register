@@ -12,9 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class CheckEnvironment1 {
-    WebDriver driver;
+    private static WebDriver driver;
     @BeforeClass
-    public void beforeClass() {
+    public static void beforeClass() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -49,7 +49,7 @@ public class CheckEnvironment1 {
     }
 
     @AfterClass
-    public void afterClass() {
+    public static void afterClass() {
         driver.quit();
         
     }

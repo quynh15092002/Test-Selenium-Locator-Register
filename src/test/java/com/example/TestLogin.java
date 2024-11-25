@@ -9,12 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class TestLogin {
 
-    String URL_login = "https://test-phase2.esse-sense.com/login";
-    String URL_dashBoard = "https://test-phase2.esse-sense.com/";
-    String user_login = "email";
-    String user_pass = "password";
-    String submitBtn = "btn-login";
-    WebDriver driver;
+    private static final String URL_login = "https://test-phase2.esse-sense.com/login";
+    private static final String URL_dashBoard = "https://test-phase2.esse-sense.com/";
+    private static final String user_login = "email";
+    private static final String user_pass = "password";
+    private static final String submitBtn = "btn-login";
+    private static WebDriver driver;
 
     public void login(String email, String password) {
         driver.findElement(By.id(user_login)).sendKeys(email);
@@ -23,7 +23,7 @@ public class TestLogin {
     }
 
     @BeforeClass
-    public void setUp(){
+    public static void setUp(){
         driver = new ChromeDriver();
         driver.get(URL_login);
     }
@@ -42,7 +42,7 @@ public class TestLogin {
 
 
     @AfterClass
-    public void afterClass() {
+    public static void afterClass() {
 
         driver.quit();
     }

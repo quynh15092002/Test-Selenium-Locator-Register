@@ -9,12 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class TestLoginCoincome {
 
-    String URL_login = "https://pm-dev-jp.makersfarminc.com/sign-in?automationtest=1";
-    String URL_dashBoard = "https://pm-dev-jp.makersfarminc.com/";
-    String user_login = "account";
-    String user_pass = "password";
-    String submitBtn = "btn-submit-default";
-    WebDriver driver;
+    static final String URL_login = "https://pm-dev-jp.makersfarminc.com/sign-in?automationtest=1";
+    static final String URL_dashBoard = "https://pm-dev-jp.makersfarminc.com/";
+    static final String user_login = "account";
+    static final String user_pass = "password";
+    static final String submitBtn = "btn-submit-default";
+    static WebDriver driver;
 
     public void login(String account, String password) {
         driver.findElement(By.id(user_login)).sendKeys(account);
@@ -23,7 +23,7 @@ public class TestLoginCoincome {
     }
 
     @BeforeClass
-    public void setUp(){
+    public static void setUp(){
         driver = new ChromeDriver();
         driver.get(URL_login);
     }
@@ -44,7 +44,7 @@ public class TestLoginCoincome {
 
 
     @AfterClass
-    public void afterClass() {
+    public static void afterClass() {
 
         driver.quit();
     }
