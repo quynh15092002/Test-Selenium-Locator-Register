@@ -1,47 +1,39 @@
 package com.web_driver;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_00_Template {
+public class Topic_09_WebElement_Excercise {
     WebDriver driver;
     @BeforeClass
     public void initialBrowser() {
-
         driver = new FirefoxDriver();
-
-        driver.get("https://demo.nopcommerce.com/register?returnUrl=%2Fcustomer%2Finfo");
     }
 
     @Test
-    public void TC_01() {
+    public void TC_01_Displayed() {
 
 
-        /// Java Document
+        //
         driver.close();
 
 
+
     }
     @Test
-    public void TC_02() {
+    public void TC_02_Enabled() {
 
 
     }
 
     @Test
-    public void TC_03() {
-
-
-
+    public void TC_03_Selected() {
 
     }
+
     @AfterClass
     public void afterClass() {
 

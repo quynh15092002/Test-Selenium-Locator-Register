@@ -37,45 +37,55 @@ public class Topic_02_Selenium_Locator {
 
     @Test
     public void TC_02_Class(){
-        //Mở màn hình Search
-        driver.get("https://demo.nopcommerce.com/search");
-        //Nhập text vào Search textbox
-        driver.findElement(By.className("search-text")).sendKeys("Macbook");
+
+        driver.findElement(By.className("header-logo"));
 
     }
     @Test
     public void TC_03_Name(){
-        //  Click vào Advanced Search checkbox
-        driver.findElement(By.name("advs")).click();
+        driver.findElement(By.name("DataOfBirthDay"));
     }
     @Test
     public void TC_04_TagName(){
      // Tìm xem có bao nhiêu thể input trên màn hình hiện tại số lượng là bao nhiêu
 
-    System.out.println(driver.findElements(By.tagName("input")).size());
-
+    //System.out.println(driver.findElements(By.tagName("input")).size());
+     driver.findElement(By.tagName("input"));
     }
     @Test
     public void TC_05_LinkText(){
         // Click vào đường link Addresses (tuyệt đối)
-        driver.findElement(By.linkText("Addresses")).click();
+       // Độ chính xác cao = Tuyệt đối = toàn bộ
+        driver.findElement(By.linkText("Shipping & returns"));
     }
 
     @Test
     public void TC_06_PartialLinkText(){
         //Click vào đường link Apply for vender account (tương đối)
-       driver.findElement(By.linkText("Addresses")).click();
+        // Độ chính xác ko cao = tương đối = 1 phần (đầu/giữa/cuối)
+       driver.findElement(By.partialLinkText("for vendor"));
+       driver.findElement(By.partialLinkText("vendor account"));
+        driver.findElement(By.partialLinkText("Apply for vendor"));
     }
     @Test
     public void TC_07_Css() {
-        // Mở lại trang Register
-        driver.get("https://demo.nopcommerce.com/register");
-        //1
-        driver.findElement(By.cssSelector("input#FirstName")).sendKeys("Selenium");
-        //2
-        driver.findElement(By.cssSelector("input[id='LastName']")).sendKeys("Locator");
-        //3
-        driver.findElement(By.cssSelector("input[name='Email']")).sendKeys("automation@gmail.com");
+
+        //Css với ID
+        driver.findElement(By.cssSelector("input[id='FirstName']"));
+        driver.findElement(By.cssSelector("inputFirstName"));
+        driver.findElement(By.cssSelector("#inputFirstName"));
+
+        //Css với class
+        driver.findElement(By.cssSelector("div[class='page-title']"));
+        driver.findElement(By.cssSelector("div.page-title"));
+        driver.findElement(By.cssSelector(".page-title"));
+
+        //Css với name
+        driver.findElement(By.cssSelector("input[name='FirstName']"));
+
+        //Css với tagname
+        driver.findElement(By.cssSelector("input"));
+        
     }
         @Test
         public void TC_08_XPath() {

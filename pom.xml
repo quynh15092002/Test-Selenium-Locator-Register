@@ -11,8 +11,8 @@
 
     <properties>
         <junit.version>4.11</junit.version>
-        <testng.version>6.8.17</testng.version>
-        <compiler.version>1.8</compiler.version>
+        <testng.version>7.8.0</testng.version>
+        <compiler.version>11</compiler.version>
     </properties>
 
 
@@ -31,11 +31,7 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -46,6 +42,44 @@
             <artifactId>xml-apis</artifactId>
             <version>1.4.01</version>
         </dependency>
+<!--      Thôi mai mang máy tính sang đây code anh lấy ít không khí =))
+        đợi em đến h ngủ r còn phải fix bug
+        YÊU PẶC PẶC
+        Mai sang làm gà sang sả cho ăn nè :v
+        VƯNG
+        cuối tuần khả năng sang cu thành rùi ạk em đi thiện nguyện tối t6
+        chiều cn về
+        oki bọn a đang tính làm chuyến du lịch mà chưa biết chốt đi đâu
+        Ba vì
+
+        mỗi thằng quỹ đang dư 2tr tổng là 12m
+        nhiều thế á
+        yes
+        điq nhảy dù k =))
+        =))
+        quỹ j thế
+        quỹ đen :))
+        á à biết nhó
+        by giờ nó thành quỹ trắng r vì anh có giấu e đâu :v
+        phải thế chứ
+        nhiều tiền này đi chơi đâu xịn xịn á
+        tầm t5 t6 sang bàn r tính nè
+        nhắn kiểu này vuinhirir =)
+        yeah ^_^
+        Để đây mai mình nói chuyện tiếp :))
+        Anh ơi
+        Anh có tiền ko
+       Em lấy bn á
+       Cho em mượn ít tiền
+       Để em lấy cớ làm phiền đến anh =)))
+       ôi :))
+       đang định banking r
+       lừa ác =))
+       ngủ nè
+       Ngủ nhắn kia
+       chỗ này ngủ gì :D? ặc ok
+        -->
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -61,13 +95,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.11.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.8.0</version>
-            <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
@@ -91,7 +118,12 @@
             <type>pom</type>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
 
     </dependencies>
